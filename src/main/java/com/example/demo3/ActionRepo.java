@@ -2,8 +2,6 @@ package com.example.demo3;
 
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class ActionRepo {
     private final Repo RPers;
@@ -13,9 +11,9 @@ public class ActionRepo {
     }
 
 
-    List<Person> returnData()
+    Person returnData(String val)
     {
-        return RPers.findAll();
+        return RPers.findPersonByName(val);
     }
 
 }
